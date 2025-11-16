@@ -1,0 +1,959 @@
+/* =================================================================
+    TEJIDOS & CREACIONES - HOJA DE ESTILO ÚNICA Y COMPLETA
+    ================================================================= */
+
+/* --- Variables y Estilos Globales --- */
+:root {
+    --color-naranja: #FF6600;
+    --color-naranja-hover: #E65C00;
+    --color-naranja-claro: #FF8533;
+    --color-blanco: #FFFFFF;
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer {
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-naranja-hover) 100%);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px rgba(255, 102, 0, 0.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =================================================================
+    PÁGINA DE INICIO (INDEX.HTML) - MEJORADA CON MÁS NARANJA
+    ================================================================= */
+.hero {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.95) 0%, rgba(255, 133, 51, 0.9) 100%),
+        url('fotos pagina web/hero-background.jpg') center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-logo {
+    max-width: 220px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: var(--color-blanco);
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 20px 0 30px 0;
+    color: var(--color-blanco);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.category-button {
+    background-color: var(--color-blanco);
+    color: var(--color-naranja);
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--color-blanco);
+}
+
+.category-button:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.benefits {
+    padding: 50px 0;
+    background: linear-gradient(180deg, var(--color-blanco) 0%, #f9f9f9 100%);
+}
+
+.benefits h2,
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--color-naranja);
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.benefits h2::after,
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-naranja), transparent);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-naranja-claro) 100%);
+    color: var(--color-blanco);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transition: all 0.5s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(255, 102, 0, 0.4);
+}
+
+.benefit-card:hover::before {
+    top: -30%;
+    right: -30%;
+}
+
+.benefit-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.4em;
+    color: var(--color-blanco);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card p {
+    position: relative;
+    z-index: 1;
+    line-height: 1.7;
+}
+
+.contact {
+    background: linear-gradient(135deg, #f4f4f4 0%, #e8e8e8 100%);
+    padding: 50px 0;
+}
+
+.whatsapp-button {
+    background: linear-gradient(135deg, #25D366 0%, #1DAE54 100%);
+    color: var(--color-blanco);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3em;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button:hover {
+    background: linear-gradient(135deg, #1DAE54 0%, #189645 100%);
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* =================================================================
+    CATÁLOGO Y VISTA DE DETALLES
+    ================================================================= */
+.header-catalogo {
+    background: linear-gradient(135deg, var(--color-blanco) 0%, #f9f9f9 100%);
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(255, 102, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-catalogo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-naranja);
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+}
+
+.logo-catalogo:hover {
+    color: var(--color-naranja-hover);
+}
+
+.logo-catalogo img {
+    height: 55px;
+    margin-right: 15px;
+}
+
+.catalogo-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: var(--color-naranja);
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.catalogo-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-naranja), transparent);
+}
+
+.category-section {
+    background-color: var(--color-blanco);
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.1);
+    border-top: 4px solid var(--color-naranja);
+}
+
+.category-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    text-align: left;
+    color: var(--color-naranja);
+    border-bottom: 3px solid var(--color-naranja);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.shield-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.shield-card {
+    background-color: #fcfcfc;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--color-texto);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.shield-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-naranja), var(--color-naranja-claro));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.shield-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 102, 0, 0.2);
+    border-color: var(--color-naranja);
+}
+
+.shield-card:hover::before {
+    transform: scaleX(1);
+}
+
+.shield-card img {
+    height: 120px;
+    max-width: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.shield-card:hover img {
+    transform: scale(1.1);
+}
+
+.shield-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* --- AÑADIDO: ESTILOS PARA EL NUEVO ICONO "BRILLANTE" DE LA TARJETA --- */
+.card-icon-shiny {
+    font-size: 3.5em; /* Tamaño grande */
+    margin-bottom: 20px;
+    color: var(--color-naranja); /* Color base */
+    text-shadow: 0 0 10px var(--color-naranja-claro), 0 0 20px rgba(255,102,0,0.5); /* Efecto "brillante" */
+    transition: all 0.3s ease;
+}
+
+.shield-card:hover .card-icon-shiny {
+    transform: scale(1.15); /* Crece al pasar el mouse */
+    color: var(--color-naranja-hover); /* Color más intenso */
+    text-shadow: 0 0 15px var(--color-naranja-claro), 0 0 30px rgba(255,102,0,0.7);
+}
+/* --- FIN DE LOS ESTILOS NUEVOS --- */
+
+
+/* --- VISTA DE DETALLES --- */
+#vista-detalles {
+    animation: fadeIn 0.5s;
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(255, 102, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-button {
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-naranja-claro) 100%);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, var(--color-naranja-hover) 0%, var(--color-naranja) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+
+.detail-layout-redesigned {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.detail-info-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-title-with-shield {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.detail-title-with-shield h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--color-naranja);
+}
+
+.detail-shield {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+}
+
+.detail-tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--color-naranja-claro);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.detail-whatsapp-button {
+    background: linear-gradient(135deg, #25D366 0%, #1DAE54 100%);
+    color: var(--color-blanco);
+    padding: 22px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3em;
+    border-radius: 12px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.detail-whatsapp-button:hover {
+    background: linear-gradient(135deg, #1DAE54 0%, #189645 100%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* =================================================================
+    CARRUSEL Y SISTEMA DE VIDEOS
+    ================================================================= */
+
+/* --- Estilos del Carrusel --- */
+.carousel {
+    position: relative;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    border-radius: 16px;
+    border: 3px solid #e0e0e0;
+    background-color: #fafafa;
+    height: 500px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-track {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+/* Imágenes normales con fondo claro */
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+/* --- MINIATURAS DE VIDEO EN EL CARRUSEL --- */
+.carousel-slide.video-slide {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 20px;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.02);
+}
+
+.video-thumbnail video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Overlay con botón de play */
+.video-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 5;
+}
+
+.video-play-overlay:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.video-play-button {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-naranja-claro) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(255, 102, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.video-play-overlay:hover .video-play-button {
+    transform: scale(1.15);
+    box-shadow: 0 12px 40px rgba(255, 102, 0, 0.7);
+}
+
+.video-play-button::after {
+    content: '▶';
+    color: white;
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+/* --- MODAL DE VIDEO FLOTANTE --- */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.video-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px; /* Ancho máximo del video */
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scaleIn 0.3s ease;
+    background: #0a0a0a;
+    border: 2px solid var(--color-naranja);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 10px 45px rgba(255, 102, 0, 0.35);
+    box-sizing: border-box;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.video-modal video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: none;
+    background-color: #000;
+}
+
+/* Botón cerrar (X) */
+.video-modal-close {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    width: 45px;
+    height: 45px;
+    background: var(--color-naranja);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+    line-height: 1;
+    z-index: 10000;
+}
+
+.video-modal-close:hover {
+    background: var(--color-naranja-hover);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* Flechas de navegación en modal */
+.video-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 102, 0, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+    z-index: 10;
+    line-height: 1;
+}
+
+.video-modal-nav:hover {
+    background: var(--color-naranja-hover);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* === ¡AQUÍ ESTÁ EL ARREGLO DE LAS FLECHAS! === */
+.video-modal-nav.prev {
+    left: 20px; /* Estaba en -70px (fuera de la pantalla) */
+}
+
+.video-modal-nav.next {
+    right: 20px; /* Estaba en -70px (fuera de la pantalla) */
+}
+/* === FIN DEL ARREGLO === */
+
+
+.video-modal-nav.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Contador de videos */
+.video-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    background: rgba(255, 102, 0, 0.9);
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(255, 102, 0, 0.3);
+}
+
+/* Botones del carrusel principal */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.95), rgba(255, 133, 51, 0.95));
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+    z-index: 10;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: linear-gradient(135deg, var(--color-naranja-hover), var(--color-naranja));
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+}
+
+.carousel-button.prev {
+    left: 15px;
+}
+
+.carousel-button.next {
+    right: 15px;
+}
+
+.carousel-button.is-hidden {
+    display: none;
+}
+
+/* =================================================================
+    RESPONSIVE
+    ================================================================= */
+@media (max-width: 768px) {
+    .detail-layout-redesigned {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .detail-info-container {
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .detail-title-with-shield {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shield-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .category-section h2 {
+        text-align: center;
+    }
+
+    .carousel-track-container {
+        height: 350px;
+    }
+
+    .video-play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .video-play-button::after {
+        font-size: 1.5em;
+    }
+
+    /* Modal responsive */
+    .video-modal-content {
+        width: 95%;
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .video-modal-close {
+        top: -45px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+    }
+
+    .video-modal-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+
+    .video-modal-nav.prev {
+        left: 10px; /* Correcto para responsive */
+    }
+
+    .video-modal-nav.next {
+        right: 10px; /* Correcto para responsive */
+    }
+
+    .video-counter {
+        font-size: 0.8em;
+        padding: 6px 16px;
+    }
+
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1em;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .main-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .benefits h2,
+    .contact h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track-container {
+        height: 300px;
+    }
+
+    .video-play-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .video-play-button::after {
+        font-size: 1.2em;
+    }
+
+    .video-modal-close {
+        top: -40px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+        right: 5px;
+    }
+
+    .video-modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+    }
+
+    .video-modal-nav.prev {
+        left: 5px; /* Correcto para responsive */
+    }
+
+    .video-modal-nav.next {
+        right: 5px; /* Correcto para responsive */
+    }
+
+    .detail-title-with-shield h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-slide img {
+        padding: 15px;
+    }
+
+    .carousel-slide.video-slide {
+        padding: 15px;
+    }
+}
